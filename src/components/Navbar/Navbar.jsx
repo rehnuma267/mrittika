@@ -5,7 +5,7 @@ import { assets } from "../../assets/assets";
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   return (
-    <div className="navber">
+    <div className="navbar">
       <ul className="navbar-menu">
         <li
           onClick={() => setMenu("home")}
