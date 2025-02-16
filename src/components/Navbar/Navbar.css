@@ -7,7 +7,7 @@
 .navbar .logo {
   width: 150px;
 }
-.navbar-menu {
+.navbar-home {
   display: flex;
   list-style: none;
   gap: 30px;
@@ -59,7 +59,7 @@ navbar-search-icon .dot {
 .navbar .logo {
   width: 150px;
 }
-.navbar-menu {
+.navbar-home {
   display: flex;
   list-style: none;
   gap: 30px;
@@ -102,4 +102,24 @@ navbar-search-icon .dot {
   border-radius: 5px;
   top: -8px;
   right: -8px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .navbar-home {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .navbar-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
 }

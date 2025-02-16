@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.home-container {
+  position: fixed; /* Ensures full coverage */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-size: cover; /* Cover entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeating */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home-content {
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px;
+    background-size: cover;
+  }
+  .home-content {
+    text-align: center;
+    padding: 10px;
+  }
+  .home-content h1 {
+    font-size: 24px;
+  }
+  .home-content p {
+    font-size: 14px;
+  }
+}

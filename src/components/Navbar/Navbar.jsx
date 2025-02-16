@@ -6,28 +6,28 @@ const Navbar = () => {
   const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
-      <ul className="navbar-menu">
+      <ul className="navbar-home">
         <li
-          onClick={() => setMenu("home")}
-          className={menu === "home" ? "active" : ""}
+          onClick={() => setMenu("Home")}
+          className={menu === "Home" ? "active" : ""}
         >
-          home
+          Home
         </li>
         <li
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
+          onClick={() => setMenu("Blog")}
+          className={menu === "Blog" ? "active" : ""}
         >
-          menu
+          Blog
         </li>
         <li
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
+          onClick={() => setMenu("About us")}
+          className={menu === "About us" ? "active" : ""}
         >
-          mobile-app
+          About us
         </li>
         <li
-          onClick={() => setMenu("contact-us")}
-          className={menu === "contact-us" ? "active" : ""}
+          onClick={() => setMenu("Contact us")}
+          className={menu === "Contact us" ? "active" : ""}
         >
           contact us
         </li>
