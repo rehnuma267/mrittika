@@ -23,6 +23,9 @@ import play from "./play.svg";
 import search_icon from "./search_icon.png";
 import basket_icon from "./basket_icon.png";
 import blog_1 from "./blog_1.png";
+import blog_5 from "./blog_5.jpg";
+import blog_7 from "./blog_7.jpg";
+import blog_9 from "./blog_9.jpg";
 
 export const assets = {
   about_1,
@@ -49,6 +52,11 @@ export const assets = {
   hero_shape,
   play,
 
+
   search_icon,
   basket_icon,
+  blog_5,
+  blog_7,
+  blog_9,
+
 };

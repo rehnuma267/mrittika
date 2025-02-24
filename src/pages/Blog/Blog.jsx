@@ -12,7 +12,7 @@ const blogs = [
   {
     id: 2,
     title: "The Journey of Rural Artisans",
-    image: "/assets/blog_5", // Replace with your own image path
+    image: "/assets/blog_5.jpg", // Replace with your own image path
     description: "Meet the artisans who bring traditional crafts to life.",
   },
   {
