@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import logo from "../../assets/images.jpg"; // Import the image
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
@@ -12,7 +13,8 @@ const Navbar = () => {
       {/* Logo */}
       <div className="navbar-logo">
         <Link to="/">
-          <img src={assets.logo} alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />{" "}
+          {/* Using imported image */}
         </Link>
       </div>
 

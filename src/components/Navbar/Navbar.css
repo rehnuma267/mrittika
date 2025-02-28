@@ -12,8 +12,11 @@
   z-index: 1000;
 }
 
-.navbar .logo {
-  width: 120px;
+.navbar-logo img {
+  width: 80px; /* Adjust width to fit navbar */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50px; /* Ensure it doesn’t exceed navbar height */
+  object-fit: contain; /* Prevent cropping */
 }
 
 .navbar-home {
