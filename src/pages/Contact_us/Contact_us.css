@@ -1,0 +1,186 @@
+.contact-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9; /* Light grey background for the page */
+  color: #333; /* Darker text color for better readability */
+  display: flex;
+  flex-direction: column; /* Stack header, form, and info container */
+  align-items: center; /* Center items horizontally */
+}
+
+.contact-header {
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 2.8em; /* Slightly larger heading */
+  margin-bottom: 10px;
+  color: #222; /* Darker heading text */
+}
+
+.contact-header p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.contact-form {
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 600px; /* Limit form width */
+}
+
+.form-row {
+  display: flex;
+  gap: 15px; /* Spacing between input groups */
+  margin-bottom: 20px;
+  flex-direction: column; /* Stack input groups on smaller screens */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align label to the left */
+  width: 100%; /* Input groups take full width in form row */
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.contact-form input {
+  padding: 12px 15px; /* Increased padding */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  background-color: #fefefe; /* Slightly off-white input background */
+}
+
+.contact-form input::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+}
+
+.submit-button {
+  padding: 12px 30px; /* Adjusted button padding */
+  background-color: #20bcd5; /* Teal/Cyan button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  width: 100%; /* Full width button */
+  max-width: 200px; /* Limit button width */
+  margin: 0 auto; /* Center the button */
+}
+
+.submit-button:hover {
+  background-color: #148a9b; /* Darker teal on hover */
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: center; /* Center info cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 20px; /* Spacing between info cards */
+  width: 100%;
+  max-width: 1200px; /* Limit container width */
+}
+
+.info-card {
+  background-color: #f0f0f0; /* Light grey card background */
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 320px; /* Maximum width of each info card */
+  flex: 1; /* Allow cards to grow and fill space */
+  min-width: 250px; /* Minimum width for cards */
+}
+
+.info-icon {
+  background-color: #20bcd5; /* Teal/Cyan icon background */
+  color: white;
+  width: 60px; /* Adjust icon circle size */
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em; /* Icon size */
+  margin: 0 auto 20px; /* Center icon and add bottom margin */
+}
+
+.info-icon i {
+  /* Style for Font Awesome icons if you use them */
+}
+
+.info-section h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-section p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.2em; /* Smaller heading for mobile */
+  }
+
+  .contact-header p {
+    font-size: 1em;
+  }
+
+  .contact-form {
+    margin-bottom: 30px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack input groups vertically on small screens */
+    gap: 10px;
+  }
+
+  .contact-form input {
+    padding: 10px 12px;
+    font-size: 0.95em;
+  }
+
+  .submit-button {
+    padding: 10px 25px;
+    font-size: 1em;
+    max-width: 100%; /* Button takes full width on mobile */
+  }
+
+  .contact-info-container {
+    flex-direction: column; /* Stack info cards vertically on mobile */
+    align-items: center; /* Center aligned cards */
+    gap: 30px; /* Increased gap between stacked cards */
+  }
+
+  .info-card {
+    padding: 25px 15px;
+    max-width: 100%; /* Info cards take full width on mobile */
+    min-width: auto; /* Remove min-width for full width */
+  }
+
+  .info-section h2 {
+    font-size: 1.4em; /* Smaller heading for mobile */
+  }
+
+  .info-section p {
+    font-size: 0.9em; /* Smaller text for mobile */
+  }
+}

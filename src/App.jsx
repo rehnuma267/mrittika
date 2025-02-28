@@ -1,23 +1,23 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Blog from "./pages/Blog/Blog";
-import About from "./pages/About_us/About_us"; // ✅ Import AboutUs correctly
+import About from "./pages/About_us/About_us";
+import Contact from "./pages/Contact_us/Contact_us";
 
 const App = () => {
+  const location = useLocation(); // Get current page URL
+
   return (
     <div className="app">
       <Navbar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} /> {/* Ensure Home is at "/" */}
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/About" element={<About />} /> {/* ✅ Added route */}
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
-      <Header />
-      <Footer />
     </div>
   );
 };

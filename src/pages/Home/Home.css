@@ -1,50 +1,216 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Home.css (Modified for Horizontal Images in Middle Section and Background Color) */
+
+.home-page {
+  font-family: sans-serif;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
+/* Hero Section Styling (No changes needed here from previous horizontal image version) */
+.hero-section {
+  background-color: #f9f9f9; /* Light grey background */
+  padding: 80px 20px;
 }
 
-.home-container {
-  position: fixed; /* Ensures full coverage */
-  top: 0;
-  left: 0;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  background-size: cover; /* Cover entire screen */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* No repeating */
-  display: flex;
-  justify-content: center;
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr; /* Text (1fr), Image 1 (0.5fr), Image 2 (0.5fr) */
+  gap: 20px;
   align-items: center;
-  color: white;
 }
 
-.home-content {
-  text-align: center;
-  font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-  padding: 20px;
-  border-radius: 10px;
+.hero-text-content {
+  grid-column: 1 / span 1; /* Text in the first column */
+  text-align: left;
+  padding-right: 20px; /* Spacing from right images */
 }
+
+.hero-text-content h1 {
+  font-size: 2.8em;
+  color: #3d271e; /* Brownish heading color */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-text-content p {
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.view-collection-button {
+  background-color: #a08578; /* Brown button color */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.view-collection-button:hover {
+  background-color: #806a60; /* Darker brown on hover */
+}
+
+.hero-image-container {
+  border-radius: 10px;
+  overflow: hidden; /* Clip image to rounded corners */
+}
+
+.hero-image-container.left {
+  grid-column: 2 / span 1; /* Left image in the second column */
+  border-top-right-radius: 50px; /* Top right rounded */
+}
+.hero-image-container.right {
+  grid-column: 3 / span 1; /* Right image in the third column */
+  border-bottom-right-radius: 50px; /* Bottom right rounded */
+  margin-top: 0; /* Remove margin-top that was for vertical stacking */
+  border-top-right-radius: 10px; /* Reset top-right radius */
+}
+
+.hero-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Middle Section Styling (Modified for Horizontal Images and Background Color) */
+.middle-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light grey background for Middle Section - ADDED */
+}
+
+.middle-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Modified grid-template-columns for horizontal images in Middle Section */
+  grid-template-columns: 0.5fr 1fr 0.5fr; /* Image 1 (0.5fr), Text (1fr), Image 2 (0.5fr) - Adjusted column order */
+  gap: 20px;
+  align-items: center;
+}
+
+.middle-image-container.left {
+  grid-column: 1 / span 1; /* Left image in the first column */
+  border-top-left-radius: 50px; /* Top left rounded */
+  overflow: hidden;
+  border-top-left-radius: 10px; /* Reset top-left radius */ /* Corrected: Remove top-left radius for consistent look */
+  border-bottom-left-radius: 50px; /* Bottom left rounded */ /* Corrected: Apply bottom-left radius to left image to match design */
+}
+.middle-image-container.right {
+  grid-column: 3 / span 1; /* Right image in the third column */
+  overflow: hidden;
+  border-top-right-radius: 50px; /* Top right rounded */ /* Corrected: Apply top-right radius to right image to match design */
+  border-bottom-right-radius: 10px; /* Reset bottom-right radius */ /* Corrected: Remove bottom-right radius for consistent look */
+  margin-top: 0; /* Remove margin-top that was for vertical stacking */
+  border-bottom-left-radius: 10px; /* Reset bottom-left radius */ /* Corrected: Remove bottom-left radius for consistent look */
+}
+.middle-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.middle-text-content {
+  grid-column: 2 / span 1; /* Text in the second column */
+  text-align: left;
+  padding-left: 20px; /* Spacing from left image */
+}
+
+.middle-text-content h2 {
+  font-size: 2.8em;
+  color: #3d271e; /* Brownish heading color */
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.middle-text-content p {
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.read-more-button {
+  background-color: transparent; /* Transparent background */
+  color: #3d271e; /* Brown button color */
+  padding: 12px 25px;
+  border: 2px solid #a08578; /* Brown border */
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #a08578; /* Brown background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Arrow Icon Style (for buttons) */
+.arrow.right {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Responsive Design for Home Section */
 @media (max-width: 768px) {
-  .home-container {
-    padding: 20px;
-    background-size: cover;
+  .hero-section,
+  .middle-section {
+    /* Apply to both sections for consistency */
+    padding: 60px 15px; /* Slightly reduced padding on mobile */
   }
-  .home-content {
-    text-align: center;
-    padding: 10px;
+
+  .hero-container,
+  .middle-container {
+    grid-template-columns: 1fr; /* Single column layout on mobile - stack vertically */
+    grid-template-rows: auto auto auto; /* Adjust rows for vertical stacking */
+    gap: 20px; /* Increased gap for vertical stacking */
   }
-  .home-content h1 {
-    font-size: 24px;
+  .hero-text-content,
+  .middle-text-content {
+    grid-column: 1; /* Text full width */
+    text-align: center; /* Center text on mobile */
+    padding-right: 0;
+    padding-left: 0;
+    order: -1; /* Ensure text appears first (above images) in the flow */
   }
-  .home-content p {
-    font-size: 14px;
+  .hero-image-container.left,
+  .hero-image-container.right,
+  .middle-image-container.left,
+  .middle-image-container.right {
+    grid-column: 1; /* Images full width */
+    margin-top: 20px; /* Spacing between elements on mobile */
+    border-radius: 10px; /* Reset border radius for mobile */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .hero-image-container.left {
+    margin-top: 0; /* Remove extra top margin for first image on mobile */
+  }
+  .middle-image-container.left {
+    margin-top: 0; /* Remove extra top margin for first image on mobile */
+  }
+  .hero-text-content h1,
+  .middle-text-content h2 {
+    font-size: 2.2em; /* Smaller heading on mobile */
+  }
+  .hero-text-content p,
+  .middle-text-content p {
+    font-size: 1em; /* Smaller text on mobile */
   }
 }

@@ -1,126 +1,325 @@
-/* Overall Page Styling */
-.about-us-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* Left Section: Heading & Description */
-.about-left {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 40px;
-}
-
-.about-left h2 {
-  font-size: 2rem;
-  font-weight: bold;
+/* General Styles */
+.about-page-container {
+  font-family: Arial, sans-serif;
   color: #333;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-.about-description {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  font-size: 16px;
+section {
+  padding: 60px 20px; /* General section padding */
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+p {
+  margin-bottom: 20px;
   color: #555;
 }
 
-/* Right Section: Team Members */
-.about-right {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-bottom: 40px;
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.team-member {
+/* Hero Section */
+.hero-section {
+  background-color: #f9f9f9; /* Light grey background */
+  padding-top: 120px; /* Increased top padding */
+  padding-bottom: 120px; /* Increased bottom padding */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 3.5em; /* Larger heading */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.enquire-button {
+  background-color: #222; /* Dark button color */
+  color: white;
+}
+
+.enquire-button:hover {
+  background-color: #555; /* Lighter hover color */
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: #fff; /* White background */
+  padding-top: 40px; /* Reduced top padding */
+  padding-bottom: 40px; /* Reduced bottom padding */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.stat-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.stat-number {
+  font-size: 2.8em; /* Large number size */
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 1em;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Image Section */
+.image-section {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 0; /* Remove padding */
+}
+
+.image-section img {
+  display: block; /* Remove extra space below image */
+  width: 100%; /* Make image full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Beauty Section */
+.beauty-section {
+  background-color: #fff; /* White background */
+}
+
+.beauty-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.team-member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%; /* Circle Shape */
-  border: 4px solid #ddd;
-}
-
-.team-member h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #333;
-}
-
-.team-member p {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Sponsor Section */
-.sponsors {
-  margin-top: 50px;
-}
-
-.sponsors h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
+.beauty-section h2 {
+  font-size: 2.8em; /* Large heading */
   margin-bottom: 20px;
 }
 
-.sponsor-logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+.beauty-section p {
+  font-size: 1.1em;
+  color: #666;
 }
 
-.sponsor-logos img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+.meet-team-button {
+  background-color: #222; /* Dark button color */
+  color: white;
+  margin-top: 30px;
+}
+
+.meet-team-button:hover {
+  background-color: #555; /* Lighter hover color */
+}
+
+/* Difference Section */
+.difference-section {
+  background-color: #f9f9f9; /* Light grey background */
+  padding-top: 80px; /* Increased top padding */
+  padding-bottom: 80px; /* Increased bottom padding */
+}
+
+.difference-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow columns to stack on smaller screens */
+}
+
+.difference-column {
+  width: 48%; /* Two columns side-by-side */
+  text-align: left;
+}
+
+.difference-column h2 {
+  font-size: 2.2em; /* Heading size */
+  margin-bottom: 25px;
+}
+
+.difference-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.difference-column li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.difference-column li::before {
+  content: "\2022"; /* Bullet point */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #222; /* Bullet color */
+}
+
+/* Process Section */
+.process-section {
+  background-color: #fff; /* White background */
+}
+
+.process-header {
+  max-width: 800px;
+  margin: 0 auto 40px; /* Add margin below header */
+}
+
+.process-header h2 {
+  font-size: 2.5em; /* Heading size */
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow steps to wrap on smaller screens */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-step {
+  width: 22%; /* Four columns */
+  text-align: center;
+  margin: 20px;
+}
+
+.process-icon {
+  width: 70px; /* Icon size */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.process-step h3 {
+  font-size: 1.4em; /* Step heading size */
+  margin-bottom: 15px;
+}
+
+.process-step ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.process-step li {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.learn-more-button {
+  background-color: #222; /* Dark button color */
+  color: white;
+  margin-top: 50px;
+}
+
+.learn-more-button:hover {
+  background-color: #555; /* Lighter hover color */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .about-us-container {
-    flex-direction: column;
-    text-align: center;
+  section {
+    padding: 40px 15px; /* Reduced section padding for mobile */
   }
 
-  .about-left h2 {
-    font-size: 1.5rem;
+  .hero-section {
+    padding-top: 80px; /* Reduced hero top padding */
+    padding-bottom: 80px; /* Reduced hero bottom padding */
   }
 
-  .about-description {
-    max-width: 90%;
-    padding: 15px;
+  .hero-section h1 {
+    font-size: 2.5em; /* Smaller heading for mobile */
   }
 
-  .about-right {
-    flex-direction: column;
-    gap: 20px;
+  .hero-section p {
+    font-size: 1em; /* Smaller text for mobile */
   }
 
-  .team-member img {
-    width: 120px;
-    height: 120px;
+  .stats-section {
+    flex-direction: column; /* Stack stats vertically */
   }
 
-  .sponsor-logos {
-    flex-direction: column;
-    gap: 15px;
+  .stat-item {
+    margin: 30px 0; /* Increased vertical margin for stats */
   }
 
-  .sponsor-logos img {
-    width: 80px;
-    height: 80px;
+  .stat-number {
+    font-size: 2.5em; /* Slightly smaller number size on mobile */
+  }
+
+  .beauty-section h2 {
+    font-size: 2.2em; /* Smaller heading for mobile */
+  }
+
+  .beauty-section p {
+    font-size: 1em; /* Smaller text for mobile */
+  }
+
+  .difference-content {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .difference-column {
+    width: 100%; /* Full width columns on mobile */
+    margin-bottom: 30px; /* Add margin between columns */
+    text-align: center; /* Center text in columns on mobile */
+  }
+  .difference-column:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last column */
+  }
+
+  .difference-column h2 {
+    font-size: 2em; /* Smaller heading for mobile */
+    text-align: center; /* Center align heading on mobile */
+  }
+  .difference-column ul {
+    text-align: left; /* Revert list text alignment to left */
+  }
+
+  .process-header h2 {
+    font-size: 2em; /* Smaller heading for mobile */
+  }
+
+  .process-steps {
+    flex-direction: column; /* Stack process steps vertically */
+  }
+
+  .process-step {
+    width: 100%; /* Full width process steps on mobile */
+    margin: 30px 0; /* Increased vertical margin for process steps */
+  }
+
+  .process-icon {
+    width: 60px; /* Slightly smaller icon size on mobile */
+  }
+
+  .process-step h3 {
+    font-size: 1.3em; /* Smaller step heading size for mobile */
   }
 }
