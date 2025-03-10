@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { assets } from "../../assets/assets";
 import logo from "../../assets/images.jpg"; // Import the image
 
@@ -58,7 +58,11 @@ const Navbar = () => {
           <img src={assets.basket_icon} alt="Basket" />
           <div className="dot"></div>
         </div>
-        <button>Sign in</button>
+        <Link to="/login">
+          {" "}
+          <button>Sign in</button>{" "}
+        </Link>{" "}
+        {/* Changed to Link to navigate to /login */}
       </div>
     </nav>
   );

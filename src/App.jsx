@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Blog from "./pages/Blog/Blog";
 import About from "./pages/About_us/About_us";
 import Contact from "./pages/Contact_us/Contact_us";
+import Login from "./components/Login/Login";
 
 const App = () => {
   const location = useLocation(); // Get current page URL
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </div>
   );
