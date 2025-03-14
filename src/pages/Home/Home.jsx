@@ -17,8 +17,15 @@ const Home = () => {
               We Make Top Quality <br /> Handmade Products
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Welcome to Mrittika! Discover the beauty of handcrafted artistry
+              at Mrittika, where tradition meets creativity. We are passionate
+              about preserving and promoting authentic terracotta crafts and
+              other handmade treasures by talented rural artisans. Explore our
+              collection, learn the stories behind each creation, and support
+              the artisans who keep these traditions alive. Whether you're here
+              to admire, shop, or learn, we’re delighted to have you as part of
+              our journey. Thank you for being a part of Mrittika—where every
+              craft has a story! Happy Exploring! Mrittika Team
             </p>
             <button className="view-collection-button">
               View Collection <i className="arrow right"></i>
@@ -44,9 +51,10 @@ const Home = () => {
               Innovative Design <br /> is Our Passion
             </h2>
             <p>
-              Curabitur interdum malesuada lectus ut pharetra. Sed tellus ante,
-              aliquet a sem id, ultricies varius dolor. Nam volutpat hendrerit
-              massa. Cras posuere ornare elementum.
+              Our website, Mrittika, is dedicated to showcasing and promoting
+              traditional crafting, especially terracotta artistry. Our goal is
+              to connect rural artisans with a broader audience, preserving
+              heritage while creating opportunities.
             </p>
             <button className="read-more-button">
               Read More <i className="arrow right"></i>

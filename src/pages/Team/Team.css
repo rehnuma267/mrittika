@@ -1,0 +1,263 @@
+/* TeamPage.css */
+
+.team-section {
+  display: flex;
+  max-width: 1200px; /* Adjust as needed for page width */
+  margin: 40px auto; /* Keep margin auto for horizontal centering of the entire section */
+  padding: 40px;
+  align-items: flex-start;
+  /* justify-content: center;  Remove justify-content: center from team-section */
+}
+
+.text-content-area {
+  flex: 1; /* Keep flex: 1 for text area to take available space */
+  padding: 30px;
+  background-color: #f9f9f9;
+  margin-right: 20px; /* Keep right margin for space between text and team members */
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  text-align: left; /* Align text to the left in text area */
+}
+
+.section-subtitle {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: left; /* Align text to the left in text area */
+}
+
+.lorem-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: left; /* Align text to the left in text area */
+}
+
+.read-more-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  /* display: block; Remove display: block and margin: auto from button */
+  /* margin: 0 auto; */
+}
+
+.read-more-button:hover {
+  background-color: #d0d0d0;
+}
+
+.team-members-area {
+  /* display: flex; Keep display flex on team-members-area */
+  gap: 20px;
+  justify-content: center; /* Keep justify-content: center to center team members within their area */
+  flex-wrap: wrap;
+  /* margin-left: auto;  Add margin-left: auto to push team-members-area to the right */
+  margin-right: auto; /* Add margin-right: auto to center team-members-area horizontally */
+  max-width: 600px; /* Optionally set a max-width for team-members-area if needed */
+}
+
+.team-member {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.member-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.member-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.member-title {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #666;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.social-icon:hover {
+  background-color: #ccc;
+}
+
+/* Responsive adjustments using media queries */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .team-section {
+    flex-direction: column; /* Stack in column on smaller screens */
+    padding: 20px;
+  }
+
+  .text-content-area {
+    margin-right: 0; /* Remove right margin when stacked */
+    margin-bottom: 20px; /* Add bottom margin to separate text and team members */
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    text-align: center; /* Center text in text area on smaller screens */
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    text-align: center; /* Center text in text area on smaller screens */
+  }
+
+  .lorem-text {
+    font-size: 13px;
+    text-align: center; /* Center text in text area on smaller screens */
+  }
+
+  .read-more-button {
+    display: block; /* Make button block and center it on smaller screens */
+    margin: 0 auto;
+  }
+
+  .team-members-area {
+    margin-left: auto; /* Keep margin auto for centering */
+    margin-right: auto;
+    gap: 15px;
+  }
+
+  .team-member {
+    padding: 15px;
+    max-width: 250px;
+  }
+
+  .member-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .member-name {
+    font-size: 15px;
+  }
+
+  .member-title {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .team-section {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .text-content-area {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .lorem-text {
+    font-size: 12px;
+  }
+
+  .read-more-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .team-members-area {
+    gap: 10px;
+  }
+
+  .team-member {
+    padding: 10px;
+    max-width: 100%; /* Full width team member on mobile */
+  }
+
+  .member-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .member-name {
+    font-size: 14px;
+  }
+
+  .member-title {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    gap: 6px;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

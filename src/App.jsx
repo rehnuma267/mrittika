@@ -8,6 +8,7 @@ import Contact from "./pages/Contact_us/Contact_us";
 import Login from "./components/Login/Login";
 import BlogDetail from "./pages/Blog/BlogDetail"; // Import BlogDetail component
 import SignIn from "./components/SignIn/SignIn";
+import Team from "./pages/Team/Team";
 const App = () => {
   const location = useLocation(); // Get current page URL
 
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />{" "}
         {/* Changed path to lowercase "login" for consistency */}
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/team" element={<Team />} />{" "}
       </Routes>
     </div>
   );

@@ -6,11 +6,12 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section brand">
-          <h3>Crafti</h3>
+          <h3>Mrittika</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non
-            porttitor augue, in convallis risus. Sed efficitur nulla quis luctus
-            pulvinar. Cras nec pulvinar condimentum lacus.
+            Our website, Mrittika, is dedicated to showcasing and promoting
+            traditional crafting, especially terracotta artistry. Our goal is to
+            connect rural artisans with a broader audience, preserving heritage
+            while creating opportunities.
           </p>
           <div className="social-icons">
             <a href="#" className="social-icon">

@@ -5,8 +5,15 @@ import iconProjectInit from "../../assets/feature_icon_1.svg"; // Using feature_
 import iconDesign from "../../assets/feature_icon_2.svg"; // Using feature_icon_2.png for Design icon
 import iconDevelopment from "../../assets/feature_icon_3.svg"; // Using feature_icon_3.png for Development icon
 import iconSupport from "../../assets/feature_icon_1.svg"; // Reusing feature_icon_1.png for Support icon (you might want a different icon)
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 
 const AboutPage = () => {
+  const navigate = useNavigate(); // Hook to get the navigate function
+
+  const goToTeamPage = () => {
+    navigate("/team"); // Navigate to the /team route (assuming this is your TeamPage route)
+  };
+
   return (
     <div className="about-page-container">
       {/* Hero Section */}
@@ -59,7 +66,10 @@ const AboutPage = () => {
             laying the groundwork for web and mobile development innovations
             through laser-focused solutions.
           </p>
-          <button className="meet-team-button">MEET OUR TEAM</button>
+          <button className="meet-team-button" onClick={goToTeamPage}>
+            MEET OUR TEAM
+          </button>{" "}
+          {/* Added onClick event */}
         </div>
       </section>
 
