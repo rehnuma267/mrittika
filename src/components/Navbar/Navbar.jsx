@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { assets } from "../../assets/assets";
 import logo from "../../assets/images.jpg"; // Import the image
-
+import signin from "../SignIn/SignIn";
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
@@ -58,7 +58,7 @@ const Navbar = () => {
           <img src={assets.basket_icon} alt="Basket" />
           <div className="dot"></div>
         </div>
-        <Link to="/login">
+        <Link to="/signin">
           {" "}
           <button>Sign in</button>{" "}
         </Link>{" "}
