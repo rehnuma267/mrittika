@@ -1,0 +1,198 @@
+/* Blog Detail Page Container */
+.blog-detail-page {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Blog Detail Container (inner content) */
+.blog-detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Detail Title */
+.blog-detail-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Blog Detail Image */
+.blog-detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Blog Detail Description */
+.blog-detail-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Customer Reviews Section Styles */
+.customer-reviews-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eee; /* Light border to separate from blog content */
+  text-align: left; /* Align text to the left in review section */
+}
+
+.customer-reviews-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Center the Customer Reviews heading */
+}
+
+/* Leave a Review Section */
+.leave-review-section {
+  margin-bottom: 30px;
+}
+
+.leave-review-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif; /* Match page font */
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Minimum height for textarea */
+}
+
+.submit-review-button {
+  padding: 10px 20px;
+  background-color: #5cb85c; /* Green submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-review-button:hover {
+  background-color: #4cae4c; /* Darker green on hover */
+}
+
+/* What others are saying Section */
+.other-reviews-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.like-count {
+  color: #777;
+  font-size: 0.9rem;
+  float: right; /* Align like count to the right */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+  .blog-detail-container {
+    padding: 20px;
+    margin: 15px auto;
+  }
+
+  .blog-detail-container h1 {
+    font-size: 2rem;
+  }
+
+  .blog-detail-description {
+    font-size: 1rem;
+  }
+
+  .customer-reviews-section h2 {
+    font-size: 1.6rem; /* Smaller heading on mobile */
+  }
+
+  .leave-review-section h3,
+  .other-reviews-section h3 {
+    font-size: 1.3rem; /* Smaller section headings on mobile */
+  }
+
+  .submit-review-button {
+    padding: 8px 15px; /* Smaller button padding on mobile */
+    font-size: 0.9rem; /* Smaller button text on mobile */
+  }
+
+  .review-item {
+    padding: 15px; /* Smaller padding for review items on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-detail-container {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .blog-detail-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .blog-detail-description {
+    font-size: 0.9rem;
+  }
+
+  .customer-reviews-section h2 {
+    font-size: 1.5rem; /* Even smaller heading on very small screens */
+  }
+
+  .leave-review-section h3,
+  .other-reviews-section h3 {
+    font-size: 1.2rem; /* Even smaller section headings */
+  }
+
+  .review-textarea {
+    font-size: 0.9rem; /* Smaller textarea font */
+  }
+
+  .submit-review-button {
+    font-size: 0.85rem; /* Even smaller button text */
+  }
+
+  .review-item {
+    padding: 10px; /* Even smaller padding for review items */
+  }
+
+  .like-count {
+    font-size: 0.8rem; /* Even smaller like count text */
+  }
+}
