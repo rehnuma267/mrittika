@@ -2,11 +2,12 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f9f9f9; /* Light grey background for the page */
-  color: #333; /* Darker text color for better readability */
+  background-color: #f9f9f9;
+  color: #333;
   display: flex;
-  flex-direction: column; /* Stack header, form, and info container */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px; /* Add top padding to push content below navbar */
 }
 
 .contact-header {
@@ -14,9 +15,9 @@
 }
 
 .contact-header h1 {
-  font-size: 2.8em; /* Slightly larger heading */
+  font-size: 2.8em;
   margin-bottom: 10px;
-  color: #222; /* Darker heading text */
+  color: #222;
 }
 
 .contact-header p {
@@ -27,21 +28,21 @@
 .contact-form {
   margin-bottom: 40px;
   width: 100%;
-  max-width: 600px; /* Limit form width */
+  max-width: 600px;
 }
 
 .form-row {
   display: flex;
-  gap: 15px; /* Spacing between input groups */
+  gap: 15px;
   margin-bottom: 20px;
-  flex-direction: column; /* Stack input groups on smaller screens */
+  flex-direction: column;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  text-align: left; /* Align label to the left */
-  width: 100%; /* Input groups take full width in form row */
+  text-align: left;
+  width: 100%;
 }
 
 .input-group label {
@@ -51,67 +52,67 @@
 }
 
 .contact-form input {
-  padding: 12px 15px; /* Increased padding */
-  border: 1px solid #ddd; /* Lighter border */
+  padding: 12px 15px;
+  border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
   color: #333;
-  background-color: #fefefe; /* Slightly off-white input background */
+  background-color: #fefefe;
 }
 
 .contact-form input::placeholder {
-  color: #aaa; /* Lighter placeholder text */
+  color: #aaa;
 }
 
 .submit-button {
-  padding: 12px 30px; /* Adjusted button padding */
-  background-color: #20bcd5; /* Teal/Cyan button color */
+  padding: 12px 30px;
+  background-color: #20bcd5;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Smooth hover transition */
-  width: 100%; /* Full width button */
-  max-width: 200px; /* Limit button width */
-  margin: 0 auto; /* Center the button */
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .submit-button:hover {
-  background-color: #148a9b; /* Darker teal on hover */
+  background-color: #148a9b;
 }
 
 .contact-info-container {
   display: flex;
-  justify-content: center; /* Center info cards horizontally */
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-  gap: 20px; /* Spacing between info cards */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100%;
-  max-width: 1200px; /* Limit container width */
+  max-width: 1200px;
 }
 
 .info-card {
-  background-color: #f0f0f0; /* Light grey card background */
+  background-color: #f0f0f0;
   padding: 30px 20px;
   border-radius: 8px;
   text-align: center;
-  max-width: 320px; /* Maximum width of each info card */
-  flex: 1; /* Allow cards to grow and fill space */
-  min-width: 250px; /* Minimum width for cards */
+  max-width: 320px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .info-icon {
-  background-color: #20bcd5; /* Teal/Cyan icon background */
+  background-color: #20bcd5;
   color: white;
-  width: 60px; /* Adjust icon circle size */
+  width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8em; /* Icon size */
-  margin: 0 auto 20px; /* Center icon and add bottom margin */
+  font-size: 1.8em;
+  margin: 0 auto 20px;
 }
 
 .info-icon i {
@@ -127,17 +128,18 @@
 .info-section p {
   font-size: 1em;
   color: #666;
-  line-height: 1.6; /* Improved line height for readability */
+  line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-page {
     padding: 15px;
+    padding-top: 60px; /* Adjust padding for smaller screens */
   }
 
   .contact-header h1 {
-    font-size: 2.2em; /* Smaller heading for mobile */
+    font-size: 2.2em;
   }
 
   .contact-header p {
@@ -149,7 +151,7 @@
   }
 
   .form-row {
-    flex-direction: column; /* Stack input groups vertically on small screens */
+    flex-direction: column;
     gap: 10px;
   }
 
@@ -161,26 +163,33 @@
   .submit-button {
     padding: 10px 25px;
     font-size: 1em;
-    max-width: 100%; /* Button takes full width on mobile */
+    max-width: 100%;
   }
 
   .contact-info-container {
-    flex-direction: column; /* Stack info cards vertically on mobile */
-    align-items: center; /* Center aligned cards */
-    gap: 30px; /* Increased gap between stacked cards */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
   .info-card {
     padding: 25px 15px;
-    max-width: 100%; /* Info cards take full width on mobile */
-    min-width: auto; /* Remove min-width for full width */
+    max-width: 100%;
+    min-width: auto;
   }
 
   .info-section h2 {
-    font-size: 1.4em; /* Smaller heading for mobile */
+    font-size: 1.4em;
   }
 
   .info-section p {
-    font-size: 0.9em; /* Smaller text for mobile */
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 15px;
+    padding-top: 50px; /* Adjust padding for smaller screens */
   }
 }

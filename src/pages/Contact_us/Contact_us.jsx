@@ -20,11 +20,11 @@ const Contact_us = () => {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Question</label>
             <input
               type="text"
               id="name"
-              placeholder="Enter your Name"
+              placeholder="Ask any question"
               required
             />
           </div>
