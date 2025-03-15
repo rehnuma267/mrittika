@@ -1,0 +1,124 @@
+/* ListItem.css */
+.list-item-section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  color: #333; /* **Ensure default text color is dark** */
+}
+
+.list-item-section h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.item-table-container {
+  overflow-x: auto; /* Enable horizontal scrolling for table on small screens */
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px; /* Rounded corners for table */
+  overflow: hidden; /* Ensure rounded corners are applied */
+  box-shadow: 0 0 0 1px #e0e0e0; /* Border around the table */
+  color: #333; /* **Ensure table text color is dark** */
+}
+
+.item-table th,
+.item-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  white-space: nowrap;
+  color: #333; /* **Ensure table cell text is dark** */
+}
+
+.item-table th {
+  background-color: #f9f9f9; /* Lighter header background */
+  font-weight: bold;
+  color: #555; /* Darker header text */
+  text-transform: uppercase; /* Uppercase header text */
+  font-size: 14px; /* Slightly smaller header font */
+}
+
+.item-table tbody tr:hover {
+  background-color: #f9f9f9; /* Hover effect consistent with header */
+}
+
+.item-table tbody tr:last-child td {
+  border-bottom: none; /* Remove border from last row */
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff; /* **Ensure button text is white for contrast** */
+}
+
+.edit-button {
+  background-color: #ffc107; /* Yellow edit button */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red delete button */
+}
+
+/* Responsive Adjustments for List Item Table */
+@media screen and (max-width: 768px) {
+  .list-item-section {
+    padding: 20px;
+  }
+  .list-item-section h2 {
+    font-size: 22px; /* Slightly smaller heading */
+    margin-bottom: 20px;
+  }
+  .item-table th,
+  .item-table td {
+    padding: 10px 12px; /* Reduced cell padding */
+    font-size: 13px; /* Smaller font size in table */
+  }
+  .edit-button,
+  .delete-button {
+    padding: 6px 10px; /* Reduced button padding */
+    font-size: 12px; /* Smaller button font */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list-item-section {
+    padding: 15px; /* Even smaller padding on mobile */
+  }
+  .list-item-section h2 {
+    font-size: 20px; /* Even smaller heading on mobile */
+    margin-bottom: 15px;
+  }
+  .item-table th,
+  .item-table td {
+    padding: 8px 10px; /* Even smaller cell padding on mobile */
+    font-size: 12px; /* Even smaller font size in table on mobile */
+  }
+  .edit-button,
+  .delete-button {
+    padding: 5px 8px; /* Even smaller button padding on mobile */
+    font-size: 11px; /* Even smaller button font on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .item-table th,
+  .item-table td {
+    font-size: 11px; /* Further reduced font size for very small screens */
+    padding: 6px 8px;
+  }
+}

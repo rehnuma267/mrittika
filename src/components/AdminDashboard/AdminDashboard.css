@@ -1,0 +1,45 @@
+/* AdminDashboard.css */
+.admin-dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.admin-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* **ADD THIS LINE: Margin to account for sidebar width** */
+}
+
+.dashboard-body {
+  padding: 25px;
+  color: #333;
+}
+
+.dashboard-body h1 {
+  color: #222;
+}
+
+/* Responsive Layout Adjustments */
+@media screen and (max-width: 768px) {
+  .admin-dashboard-container {
+    flex-direction: column; /* Stack sidebar and content vertically */
+  }
+
+  .admin-content {
+    width: 100%;
+    margin-left: 0; /* **ADD THIS LINE: Remove margin on smaller screens** */
+  }
+
+  .dashboard-body {
+    padding: 15px; /* Reduced padding on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-body {
+    padding: 10px; /* Even smaller padding on mobile */
+  }
+}

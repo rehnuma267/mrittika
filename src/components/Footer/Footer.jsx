@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css"; // Import Footer's CSS
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Footer = () => {
   return (
@@ -72,14 +73,18 @@ const Footer = () => {
         <div className="footer-section get-in-touch">
           <h3>Get In Touch</h3>
           <p>Question or feedback? We'd love to hear from you</p>
-          <button className="contact-us-button">
-            Contact Us <i className="arrow right"></i>
-          </button>
+          <Link to="/contact" className="contact-us-button-link">
+            {" "}
+            {/* Wrap button with Link */}
+            <button className="contact-us-button">
+              Contact Us <i className="arrow right"></i>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="copyright">
         <p>
-          Copyright 2022 codecwthcodee. All Right Reserved <br />{" "}
+          Copyright 2022 codecwthcodee. All Right Reserved <br />
           <a href="#">Crafti.com</a>
         </p>
       </div>

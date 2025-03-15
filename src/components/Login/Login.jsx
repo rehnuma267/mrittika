@@ -1,4 +1,3 @@
-// Login.jsx
 import React, { useState } from "react";
 import "./Login.css";
 import axios from "axios";
@@ -18,7 +17,7 @@ const Login = () => {
       });
       if (response.data.message === "User logged in successfully") {
         alert("Login successful");
-        navigate("/homepage");
+        navigate("/admin"); // <----- Changed navigation path to "/admin"
       }
     } catch (error) {
       alert(error.response?.data?.message || "Login failed");
@@ -26,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-page-container">
       <div className="login-box">
         <h2 className="login-title">User Login Form</h2>
         <form onSubmit={handleSubmit}>

@@ -6,30 +6,39 @@ import Blog from "./pages/Blog/Blog";
 import About from "./pages/About_us/About_us";
 import Contact from "./pages/Contact_us/Contact_us";
 import Login from "./components/Login/Login";
-import BlogDetail from "./pages/Blog/BlogDetail"; // Import BlogDetail component
+import BlogDetail from "./pages/Blog/BlogDetail";
 import SignIn from "./components/SignIn/SignIn";
 import Team from "./pages/Team/Team";
+import UserProfilePage from "./components/UserProfilePage/UserProfilePage";
+import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
+
 const App = () => {
-  const location = useLocation(); // Get current page URL
+  const location = useLocation();
+  const isAdminRoute = location.pathname === "/admin"; // Dynamically change Navbar based on this
+
+  // **State to conditionally render AdminDashboard - Example only!**
+  const [showAdminDashboard, setShowAdminDashboard] = React.useState(false); // Initially hide it
 
   return (
     <div className="app">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} /> {/* Ensure Home is at "/" */}
-        <Route path="/blog" element={<Blog />} />{" "}
-        {/* Changed path to lowercase "blog" for consistency */}
-        <Route path="/blog/:id" element={<BlogDetail />} />{" "}
-        {/* Route for BlogDetail page with dynamic id */}
-        <Route path="/about" element={<About />} />{" "}
-        {/* Changed path to lowercase "about" for consistency */}
-        <Route path="/contact" element={<Contact />} />{" "}
-        {/* Changed path to lowercase "contact" for consistency */}
-        <Route path="/login" element={<Login />} />{" "}
-        {/* Changed path to lowercase "login" for consistency */}
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/team" element={<Team />} />{" "}
-      </Routes>
+      <Navbar isAdminArea={isAdminRoute} />
+      <div className="content-area">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/profile" element={<UserProfilePage />} />
+          {/* **No Route for /admin anymore in Routes block** */}
+        </Routes>
+        {/* **Conditional Rendering of AdminDashboard - NOT Route-Based** */}
+        {location.pathname === "/admin" && <AdminDashboard />}{" "}
+        {/* Render AdminDashboard if path is /admin */}
+      </div>
     </div>
   );
 };

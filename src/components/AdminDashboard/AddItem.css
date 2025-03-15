@@ -1,0 +1,164 @@
+/* AddItem.css */
+.add-item-section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  color: #333; /* **Ensure default text color is dark** */
+}
+
+.add-item-section h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555; /* Keep label color slightly lighter */
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333; /* **Ensure input text is dark** */
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  padding-right: 30px;
+}
+
+.upload-image-group {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.upload-box {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-box:hover {
+  background-color: #f9f9f9;
+}
+
+.upload-icon {
+  font-size: 40px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  color: #777;
+  font-size: 16px;
+}
+
+.add-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e53935;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive adjustments for Add Item form */
+@media screen and (max-width: 600px) {
+  .add-item-section {
+    padding: 20px;
+  }
+  .add-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .upload-box {
+    padding: 20px; /* Adjust upload box padding on smaller screens */
+  }
+  .upload-icon {
+    font-size: 30px; /* Adjust upload icon size on smaller screens */
+  }
+  .upload-text {
+    font-size: 14px; /* Smaller upload text */
+  }
+  .add-button {
+    font-size: 14px; /* Even smaller button font on mobile */
+    padding: 8px 16px; /* Even smaller button padding on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .add-item-section {
+    padding: 15px; /* Even smaller padding on mobile */
+  }
+  .add-item-section h2 {
+    font-size: 20px; /* Even smaller heading on mobile */
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    font-size: 14px; /* Even smaller label font on mobile */
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px; /* Even smaller input padding on mobile */
+    font-size: 14px; /* Even smaller input font on mobile */
+  }
+  .upload-box {
+    padding: 15px; /* Even smaller upload box padding on mobile */
+  }
+  .upload-icon {
+    font-size: 25px; /* Even smaller upload icon on mobile */
+  }
+  .upload-text {
+    font-size: 13px; /* Even smaller upload text on mobile */
+  }
+  .add-button {
+    font-size: 14px; /* Even smaller button font on mobile */
+    padding: 8px 16px; /* Even smaller button padding on mobile */
+  }
+}

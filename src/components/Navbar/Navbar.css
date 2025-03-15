@@ -1,3 +1,4 @@
+/* Navbar.css */
 .navbar {
   position: fixed;
   top: 0;
@@ -13,10 +14,10 @@
 }
 
 .navbar-logo img {
-  width: 80px; /* Adjust width to fit navbar */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 50px; /* Ensure it doesn’t exceed navbar height */
-  object-fit: contain; /* Prevent cropping */
+  width: 80px;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
 }
 
 .navbar-home {
@@ -38,10 +39,6 @@
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.navbar-search-icon {
-  position: relative;
 }
 
 .navbar-search-icon .dot {
@@ -80,5 +77,115 @@
 
   .navbar-home.open {
     display: flex;
+  }
+}
+
+/* Admin Navbar Styles - Added Below Website Navbar Styles */
+.admin-navbar {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-navbar .navbar-brand {
+  /* Use more specific selector */
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.admin-navbar .navbar-logo {
+  /* Use more specific selector */
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.admin-navbar .admin-text {
+  /* Use more specific selector */
+  font-weight: normal;
+  color: #777;
+  margin-left: 5px;
+}
+
+.admin-navbar .navbar-user {
+  /* Use more specific selector */
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.admin-navbar .user-avatar {
+  /* Use more specific selector */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.admin-navbar .fa-user-circle {
+  /* Use more specific selector */
+  font-size: 35px;
+  color: #999;
+}
+
+/* Responsive Adjustments for Admin Navbar - You can adjust these */
+@media screen and (max-width: 768px) {
+  .admin-navbar {
+    padding: 10px 15px;
+  }
+  .admin-navbar .navbar-brand {
+    font-size: 20px;
+  }
+  .admin-navbar .navbar-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+  }
+  .admin-navbar .admin-text {
+    font-size: 14px;
+  }
+  .admin-navbar .navbar-user {
+    font-size: 14px;
+  }
+  .admin-navbar .user-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .admin-navbar .fa-user-circle {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-navbar .navbar-brand {
+    font-size: 18px;
+  }
+  .admin-navbar .admin-text {
+    display: none;
+  }
+  .admin-navbar .navbar-user {
+    font-size: 12px;
+  }
+  .admin-navbar .user-avatar {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+  .admin-navbar .fa-user-circle {
+    font-size: 25px;
   }
 }

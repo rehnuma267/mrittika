@@ -1,5 +1,6 @@
 import React from "react";
-import "./Home.css"; // Import the CSS file
+import "./Home.css";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import homeHeroImageLeft from "../../assets/hero_banner_1.jpg"; // Replace with your left hero image
 import homeHeroImageRight from "../../assets/hero_banner_2.jpg"; // Replace with your right hero image
 import homeMiddleImageLeft from "../../assets/blog_7.jpg"; // Replace with your middle left image
@@ -27,9 +28,13 @@ const Home = () => {
               our journey. Thank you for being a part of Mrittika—where every
               craft has a story! Happy Exploring! Mrittika Team
             </p>
-            <button className="view-collection-button">
-              View Collection <i className="arrow right"></i>
-            </button>
+            <Link to="/blog" className="view-collection-button-link">
+              {" "}
+              {/* Use Link for View Collection */}
+              <button className="view-collection-button">
+                View Collection <i className="arrow right"></i>
+              </button>
+            </Link>
           </div>
           <div className="hero-image-container left">
             <img src={homeHeroImageLeft} alt="Handmade Products Left" />
@@ -51,10 +56,9 @@ const Home = () => {
               Innovative Design <br /> is Our Passion
             </h2>
             <p>
-              Our website, Mrittika, is dedicated to showcasing and promoting
-              traditional crafting, especially terracotta artistry. Our goal is
-              to connect rural artisans with a broader audience, preserving
-              heritage while creating opportunities.
+              Curabitur interdum malesuada lectus ut pharetra. Sed tellus ante,
+              aliquet a sem id, ultricies varius dolor. Nam volutpat hendrerit
+              massa. Cras posuere ornare elementum.
             </p>
             <button className="read-more-button">
               Read More <i className="arrow right"></i>

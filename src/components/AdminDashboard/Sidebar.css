@@ -1,0 +1,120 @@
+.admin-sidebar {
+  background-color: #f8f9fa; /* Light grey sidebar background */
+  width: 250px;
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px; /* Reduced top padding */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #e0e0e0; /* Add right border */
+}
+
+.sidebar-header {
+  padding: 20px 20px 30px; /* Increased bottom padding for header */
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0; /* Separator line */
+  margin-bottom: 20px;
+}
+
+.sidebar-logo {
+  width: 40px; /* Adjust logo size in sidebar */
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.sidebar-header span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e53935; /* Tomato red color */
+  vertical-align: middle;
+}
+
+.sidebar-header .admin-text {
+  font-weight: normal;
+  color: #777;
+  margin-left: 5px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px 20px; /* Reduced padding */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #e9ecef; /* Slightly darker hover/active color */
+}
+
+.menu-item.active {
+  background-color: #e0e0e0; /* Active menu item background */
+  border-left: 3px solid #e53935; /* Red active indicator */
+  padding-left: 17px; /* Adjust padding to account for border */
+}
+
+.menu-item a {
+  display: block;
+  text-decoration: none;
+  color: #495057; /* Dark grey text */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #777; /* Grey icon color */
+  width: 20px; /* Fixed width for icons to align text */
+  text-align: center;
+}
+
+/* Responsive adjustments for sidebar */
+@media screen and (max-width: 768px) {
+  .admin-sidebar {
+    position: static; /* Sidebar becomes static on smaller screens */
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+    border-right: none; /* Remove right border on smaller screens */
+  }
+  .sidebar-header {
+    display: none; /* Hide header on smaller screens if needed */
+  }
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scroll if needed */
+  }
+  .menu-item {
+    padding: 10px 15px;
+    text-align: center;
+    flex-grow: 1; /* Distribute space evenly */
+    border-bottom: none; /* Remove bottom border for horizontal menu */
+  }
+  .menu-item.active {
+    border-left: none; /* Remove left border for active state in horizontal menu */
+    border-top: 2px solid #e53935; /* Top border for active indicator in horizontal menu */
+    padding-left: 15px; /* Reset padding */
+    padding-top: 8px; /* Adjust padding for top border indicator */
+  }
+  .menu-item a {
+    flex-direction: column; /* Stack icon and text vertically in horizontal menu */
+    text-align: center;
+  }
+  .menu-icon {
+    margin-right: 0;
+    margin-bottom: 5px; /* Add bottom margin for icon in vertical stacking */
+    width: auto; /* Reset icon width */
+    text-align: center; /* Center icon text */
+  }
+}
