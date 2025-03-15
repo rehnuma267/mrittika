@@ -1,14 +1,38 @@
 import React from "react";
 import "./Contact_us.css";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
+
 
 const Contact_us = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const userInfo={
+    access_key:"d017cb2c-9243-4c2f-a528-e083acc5fab5",
+    email:data.email,
+    name:data.name,
+    }
+    try {
+      await axios.post("https://api.web3forms.com/submit",userInfo)
+      toast.success("Message sent successfully")
+    } catch (error) {
+      toast.error("An error occurred")
+    }
+  };
   return (
     <div className="contact-page">
       <div className="contact-header">
         <h1>Contact Us</h1>
         <p>Any questions or remarks? Just write us a message!</p>
       </div>
-      <form className="contact-form">
+      <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
         <div className="form-row">
           <div className="input-group">
             <label htmlFor="email">Email</label>
@@ -16,8 +40,13 @@ const Contact_us = () => {
               type="email"
               id="email"
               placeholder="Enter a valid email address"
-              required
+              {...register("email", { required: true })}
             />
+            {errors.email && (
+              <span className="text-sm text-red-500 font-semibold">
+                This field is required
+              </span>
+            )}
           </div>
           <div className="input-group">
             <label htmlFor="name">Question</label>
@@ -25,8 +54,13 @@ const Contact_us = () => {
               type="text"
               id="name"
               placeholder="Ask any question"
-              required
+              {...register("name", { required: true })}
             />
+            {errors.name && (
+              <span className="text-sm text-red-500 font-semibold">
+                This field is required
+              </span>
+            )}
           </div>
         </div>
         <button type="submit" className="submit-button">

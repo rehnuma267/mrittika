@@ -1,5 +1,6 @@
 // user.controller.js
 import User from "../models/user.model.js";
+import {v2 as cloudinary} from "cloudinary";
 import bcrypt from "bcryptjs";
 import createTonkenAndSaveCookie from "../jwt/generateToken.js";
 
