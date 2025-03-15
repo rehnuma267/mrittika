@@ -1,10 +1,8 @@
-/* Blog.css */
 /* Container for the blog page */
 .blog-page {
-  font-family: "Arial", sans-serif;
+  text-align: center;
   padding: 20px;
   padding-top: 70px; /* Add top padding to push content below navbar */
-  text-align: center;
 }
 
 .blog-header {
@@ -12,20 +10,19 @@
 }
 
 .blog-header h1 {
-  color: #333;
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  color: #333;
 }
 
 .blog-header p {
-  color: #777;
   font-size: 1.2rem;
+  color: #777;
 }
 
 /* Container for the list of blog cards */
 .blog-container {
-  margin: auto;
   max-width: 1200px;
+  margin: auto;
   padding: 20px;
 }
 
@@ -33,88 +30,71 @@
 .blog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 /* Styling for each blog card */
 .blog-card {
+  width: 300px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex; /* Added flex layout to card */
-  flex-direction: column; /* Stack content vertically */
   padding: 15px;
   text-align: center;
-  overflow: hidden; /* Ensure content stays within rounded borders */
-  transition: transform 0.3s ease-in-out;
-}
-
-.blog-card:hover {
-  transform: scale(1.03);
+  display: flex; /* Added flex layout to card */
+  flex-direction: column; /* Stack content vertically */
 }
 
 /* Styling for images inside the blog cards */
 .blog-card img {
-  display: block; /* Remove extra space below image */
-  height: 200px;
-  margin-bottom: 10px; /* Added margin below image */
-  object-fit: cover;
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px; /* Added margin below image */
 }
 
 /* Title and description of the blog */
 .blog-card h2 {
-  color: #333;
-  font-size: 1.5rem; /* Reduced font size for title */
+  font-size: 24px; /* Reduced font size for title */
   margin: 10px 0;
-  padding: 15px;
 }
 
 .blog-card p {
-  color: #555;
   font-size: 14px;
-  flex-grow: 1; /* Allow description to take available space */
-  line-height: 1.5;
+  color: #555;
   margin-bottom: 15px; /* Added margin below description */
-  padding: 0 15px 20px;
+  flex-grow: 1; /* Allow description to take available space */
 }
 
 /* Detail button style */
 .detail-button {
-  align-self: flex-start; /* Align button to the start (left) */
   background-color: #49557e; /* Example button color */
-  border: none;
-  border-radius: 5px;
   color: white;
-  cursor: pointer;
-  display: block; /* Make button full width for card */
-  font-size: 14px;
-  margin-top: auto; /* Push button to the bottom */
+  border: none;
   padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
   transition: background-color 0.3s ease;
-  width: 100%;
+  align-self: flex-start; /* Align button to the start (left) */
+  margin-top: auto; /* Push button to the bottom */
 }
 
 .detail-button:hover {
   background-color: #3a446a;
 }
 
-.post-date {
-  color: #777;
-  font-size: 0.9rem;
-  padding: 0 15px 10px;
-  text-align: right;
-}
-
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
-  .blog-page {
-    padding-top: 60px; /* Slightly reduced padding on smaller screens */
-    padding: 15px;
+  .blog-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-card {
+    width: 80%;
   }
 
   .blog-header h1 {
@@ -125,42 +105,13 @@
     font-size: 1rem;
   }
 
-  .blog-list {
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .blog-card {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
-    width: 80%;
-  }
-
-  .blog-card img {
-    height: 180px; /* Slightly smaller image height on smaller screens */
-  }
-
-  .blog-card h2 {
-    font-size: 1.3em;
-    padding: 10px;
-  }
-
-  .blog-card p {
-    font-size: 0.95em;
-    padding: 0 10px 15px;
-  }
-
-  .detail-button {
-    font-size: 13px; /* Slightly smaller button text on very small screens */
-    padding: 6px 12px; /* Slightly smaller button padding */
+  .blog-page {
+    /* Adjust padding for smaller screens if navbar height changes */
+    padding-top: 60px; /* Slightly reduced padding on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .blog-page {
-    padding-top: 50px; /* Even less padding on very small screens */
-  }
-
   .blog-list {
     flex-direction: column;
   }
@@ -181,4 +132,10 @@
     font-size: 13px; /* Slightly smaller button text on very small screens */
     padding: 6px 12px; /* Slightly smaller button padding */
   }
+
+  .blog-page {
+    /* Adjust padding for very small screens if needed */
+    padding-top: 50px; /* Even less padding on very small screens */
+  }
 }
+
