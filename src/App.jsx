@@ -16,9 +16,6 @@ const App = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname === "/admin"; // Dynamically change Navbar based on this
 
-  // **State to conditionally render AdminDashboard - Example only!**
-  const [showAdminDashboard, setShowAdminDashboard] = React.useState(false); // Initially hide it
-
   return (
     <div className="app">
       <Navbar isAdminArea={isAdminRoute} />
@@ -33,11 +30,9 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/team" element={<Team />} />
           <Route path="/profile" element={<UserProfilePage />} />
-          {/* **No Route for /admin anymore in Routes block** */}
+          <Route path="/admin" element={<AdminDashboard />} />{" "}
+          {/* ✅ Added inside Routes */}
         </Routes>
-        {/* **Conditional Rendering of AdminDashboard - NOT Route-Based** */}
-        {location.pathname === "/admin" && <AdminDashboard />}{" "}
-        {/* Render AdminDashboard if path is /admin */}
       </div>
     </div>
   );

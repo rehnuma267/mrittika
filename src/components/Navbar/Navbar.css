@@ -120,6 +120,7 @@
   color: #555;
   display: flex;
   align-items: center;
+  position: relative; /* Added for positioning dropdown */
 }
 
 .admin-navbar .user-avatar {
@@ -133,6 +134,7 @@
   align-items: center;
   color: #fff;
   font-size: 20px;
+  cursor: pointer; /* Add cursor pointer to avatar */
 }
 
 .admin-navbar .fa-user-circle {
@@ -188,4 +190,36 @@
   .admin-navbar .fa-user-circle {
     font-size: 25px;
   }
+}
+
+/* Logout Dropdown Styles - Added Below Admin Navbar Responsive Styles */
+.logout-dropdown {
+  position: absolute;
+  top: 100%; /* Position below user avatar */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 120px; /* Adjust width as needed */
+  z-index: 101; /* Ensure dropdown is above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch buttons to full width */
+}
+
+.logout-button {
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #f9f9f9;
 }
