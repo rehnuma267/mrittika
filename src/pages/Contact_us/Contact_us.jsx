@@ -86,9 +86,9 @@ const Contact_us = () => {
             <i className="fas fa-phone"></i> {/* Font Awesome Phone Icon */}
           </div>
           <div className="info-section">
-            <h2>PHONE (LANDLINE)</h2>
-            <p>+912 3 567 8987</p>
-            <p>+912 5 252 3336</p>
+            <h2>PHONE</h2>
+            <p>+8801743634867</p>
+            <p>+8801473574748</p>
           </div>
         </div>
 
@@ -100,7 +100,7 @@ const Contact_us = () => {
           <div className="info-section">
             <h2>OUR OFFICE LOCATION</h2>
             <p>The Interior Design Studio Company</p>
-            <p>The Courtyard, Al Quoz 1, Colorado, USA</p>
+            <p>126/C Motijheel, Dhaka</p>
           </div>
         </div>
       </div>
